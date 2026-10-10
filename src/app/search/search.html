@@ -1,9 +1,11 @@
 <input type="text" #ville placeholder="Entrez une adresse ou un lieu">
-<button (click)="rechercheNominatim(ville.value)">Test Service</button>
+<button (click)="rechercheNominatim(ville.value)">Rechercher</button>
 <p>{{ ville.value }}</p>
 
 
 
 @for (resultat of response(); track resultat) {
-<p (click)="selectionnerVille()">{{ resultat.display_name }}</p>
+<p (click)="selectionnerVille(resultat)">{{ resultat.display_name }}</p>
 }
+
+{{ message }}

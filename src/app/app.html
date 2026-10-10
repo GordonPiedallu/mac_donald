@@ -1,3 +1,4 @@
 <app-restaurant [nomRestaurant]="restaurantNom" (restaurantSelectionne)="selectionnerRestaurant()"></app-restaurant>
-<app-search></app-search>
+<app-search (villeSelection)="recevoirVille($event)"></app-search>
+<app-map></app-map>
 <p>{{ message }}</p>

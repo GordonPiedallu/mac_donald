@@ -1,10 +1,11 @@
 import { Component, Output, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Restaurant } from './restaurant/restaurant';
 import { Search } from './search/search';
+import { EventEmitter } from '@angular/core';
+import { Map } from './map/map';
 
 @Component({
-  imports: [RouterOutlet, Restaurant, Search],
+  imports: [Restaurant, Search, Map],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -20,6 +21,10 @@ export class App {
   selectionnerRestaurant() {
      this.message = `Vous avez sélectionné le restaurant : ${this.restaurantNom}`;
   }
+ recevoirVille (ville: any) {
+    this.message = ' Vous avez selectionné la ville : ' + ville.display_name;
+ }
 }
+
 
 
