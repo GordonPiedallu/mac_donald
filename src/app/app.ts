@@ -1,4 +1,4 @@
-import { Component, Output, signal } from '@angular/core';
+import { Component, Output, signal, Input } from '@angular/core';
 import { Restaurant } from './restaurant/restaurant';
 import { Search } from './search/search';
 import { EventEmitter } from '@angular/core';
@@ -24,6 +24,7 @@ export class App {
  recevoirVille (ville: any) {
     this.message = ' Vous avez selectionné la ville : ' + ville.display_name;
  }
+ villeSelection: any = null;
 }
 
 
