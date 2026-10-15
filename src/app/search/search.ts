@@ -29,6 +29,7 @@ selectionnerVille(ville: any) {
   console.log(this.villeSelectionner());
   this.villeSelection.emit(ville);
  }
+
   
   constructor(private rechercheService: Recherche) {
  }

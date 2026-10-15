@@ -12,6 +12,9 @@ import { Map } from './map/map';
 })
 
 export class App {
+villeSelection: any = null;
+
+
   protected readonly title = signal('mac_donald');
   
   restaurantNom = "McDonald's Tours";
@@ -23,8 +26,9 @@ export class App {
   }
  recevoirVille (ville: any) {
     this.message = ' Vous avez selectionné la ville : ' + ville.display_name;
+    this.villeSelection = ville;
+    console.log('Ville sélectionnée dans App:', ville);
  }
- villeSelection: any = null;
 }
 
 
